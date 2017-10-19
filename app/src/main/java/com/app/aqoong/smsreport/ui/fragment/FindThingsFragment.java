@@ -197,28 +197,39 @@ public class FindThingsFragment extends Fragment {
 
         switch (spinItem){
             case 0:
+                //버스
                 result = Globar.FIND_CODE_BUS;
                 break;
             case 1:
-                result = Globar.FIND_CODE_VILBUS;
-                break;
-            case 2:
+                //1~4호선
                 result = Globar.FIND_CODE_SUB14;
                 break;
-            case 3:
+            case 2:
+                //5~8호선
                 result = Globar.FIND_CODE_SUB58;
                 break;
-            case 4:
+            case 3:
+                //9호선
                 result = Globar.FIND_CODE_SUB9;
                 break;
-            case 5:
-                result = Globar.FIND_CODE_KORAIL;
-                break;
-            case 6:
+            case 4:
+                //법인택시
                 result = Globar.FIND_CODE_COMPANYTAXI;
                 break;
-            case 7:
+            case 5:
+                //개인택시
                 result = Globar.FIND_CODE_TAXI;
+                break;
+            case 6:
+                //코레일
+                result = Globar.FIND_CODE_KORAIL;
+                break;
+            case 7:
+                //마을버스
+                result = Globar.FIND_CODE_VILBUS;
+                break;
+            case 8:
+                //경찰청 사이트
                 break;
 
         }

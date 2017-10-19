@@ -23,7 +23,6 @@ import com.app.aqoong.smsreport.ui.fragment.ReportMainFragment;
  */
 
 public class PagerActivity extends AppCompatActivity {
-    private Activity mActivity = null;
 
     private PageAdapter pageAdapter = null;
     private ViewPager mViewPager = null;
@@ -35,7 +34,6 @@ public class PagerActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mActivity = this;
         setContentView(R.layout.activity_main);
 
         //swipe tab view create
