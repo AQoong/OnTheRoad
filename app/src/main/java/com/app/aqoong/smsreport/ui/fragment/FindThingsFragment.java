@@ -39,7 +39,7 @@ import java.util.Locale;
 
 @SuppressLint("ValidFragment")
 public class FindThingsFragment extends Fragment {
-    private boolean isDebug = true;
+    private boolean isDebug = false;
 
     private Activity mActivity = null;
 
@@ -57,6 +57,10 @@ public class FindThingsFragment extends Fragment {
     private ProgressDialog progressDialog = null;
     private InputMethodManager imm = null;
 
+    public FindThingsFragment() {}
+
+
+    @SuppressLint("ValidFragment")
     public FindThingsFragment(Activity activity) {
         mActivity = activity;
 
@@ -71,6 +75,7 @@ public class FindThingsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
+        //키보드 내리기
         View view = inflater.inflate(R.layout.find_main, null);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,6 +122,8 @@ public class FindThingsFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
+                editSearch.setText("");
+
                 ConnectivityManager cm =
                         (ConnectivityManager)mActivity.getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
@@ -135,7 +142,6 @@ public class FindThingsFragment extends Fragment {
                     mRecyclerView.setVisibility(View.GONE);
                     mWebView.setVisibility(View.VISIBLE);
                     mWebView.loadUrl("https://lost112.go.kr/find/findList.do");
-
                     return;
                 }else{
                     panelSearch.setVisibility(View.VISIBLE);

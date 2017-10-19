@@ -80,4 +80,7 @@ public class Globar {
     public final static int FIND_KEY_IMAGE_URL = 11;
 
     public static ArrayList<ProductData> findProductList = new ArrayList<ProductData>();
+
+
+
 }

@@ -28,8 +28,8 @@ public class PagerActivity extends AppCompatActivity {
     private PageAdapter pageAdapter = null;
     private ViewPager mViewPager = null;
 
-    private FindThingsFragment findThingsFragment = new FindThingsFragment(this);
-    private ReportMainFragment reportMainFragment = new ReportMainFragment(this);
+    private FindThingsFragment findThingsFragment = null;
+    private ReportMainFragment reportMainFragment = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,18 +38,17 @@ public class PagerActivity extends AppCompatActivity {
         mActivity = this;
         setContentView(R.layout.activity_main);
 
-
-
         //swipe tab view create
         pageAdapter = new PageAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager)findViewById(R.id.pager);
         mViewPager.setAdapter(pageAdapter);
 
-
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+
+        findThingsFragment = new FindThingsFragment(this);
+        reportMainFragment = new ReportMainFragment(this);
     }
 
     @Override
@@ -73,6 +72,8 @@ public class PagerActivity extends AppCompatActivity {
 
             switch(position){
                 case 0:
+
+
                     return reportMainFragment;
                 case 1:
                     return findThingsFragment;

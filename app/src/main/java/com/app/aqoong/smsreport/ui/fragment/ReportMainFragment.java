@@ -1,5 +1,6 @@
 package com.app.aqoong.smsreport.ui.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +23,10 @@ import com.app.aqoong.smsreport.ui.ReportInsertActivity;
 public class ReportMainFragment extends Fragment {
     private Context mContext;
 
+    public ReportMainFragment(){
+
+    }
+    @SuppressLint("ValidFragment")
     public ReportMainFragment(Context _context){
         mContext = _context;
     }
