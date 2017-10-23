@@ -155,23 +155,34 @@
                 android:text="status"/>
         </TableRow>
         <TableRow
+            android:layout_width="wrap_content"
             android:layout_margin="3dp"
             android:padding="5dp">
 
             <ScrollView
-                android:scrollbars="vertical|horizontal"
-                android:layout_width="wrap_content"
-                >
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:clipToPadding="false"
+                android:fadeScrollbars="true"
+                android:fillViewport="false"
+                android:scrollbars="none"
+                android:visibility="visible">
+
                 <TextView
-                    android:paddingRight="10dp"
-                    android:maxLines="20"
-                    android:lines="20"
-                    android:textColor="@android:color/black"
+
                     android:id="@+id/find_detail_thing"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="notic"/>
+                    android:lines="20"
+                    android:maxLines="20"
+                    android:text="notic"
+                    android:textColor="@android:color/black" />"
             </ScrollView>
+
+            <!--<Space-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content" />-->
         </TableRow>
 
     </TableLayout>
