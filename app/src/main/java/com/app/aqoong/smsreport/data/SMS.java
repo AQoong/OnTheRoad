@@ -1,11 +1,8 @@
 package com.app.aqoong.smsreport.data;
 
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.telephony.SmsManager;
-import android.util.Log;
 
 import java.util.HashMap;
 

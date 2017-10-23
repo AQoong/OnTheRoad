@@ -23,7 +23,6 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import com.app.aqoong.smsreport.R;
 import com.app.aqoong.smsreport.data.Globar;
@@ -304,7 +303,7 @@ public class ReportInsertActivity extends AppCompatActivity {
                 }
                 break;
             case Globar.TYPE_SUB:
-                Log.d(TAG, ""+lineNumber.getText());
+//                Log.d(TAG, ""+lineNumber.getText());
                 if(lineNumber.getText().length() <= 0) {
                     result = true;
                 }
@@ -355,7 +354,7 @@ public class ReportInsertActivity extends AppCompatActivity {
                 try {
                     add = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1).get(0);
                     myLocationGPS.setText(add.getAddressLine(0));
-                    Log.d(TAG, add.toString());
+//                    Log.d(TAG, add.toString());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

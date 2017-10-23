@@ -12,7 +12,6 @@ import com.app.aqoong.smsreport.R;
 import com.app.aqoong.smsreport.ui.FindDetailActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 /**

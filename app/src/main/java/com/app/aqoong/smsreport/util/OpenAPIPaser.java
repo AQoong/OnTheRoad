@@ -70,7 +70,7 @@ public class OpenAPIPaser extends AsyncTask<String, String, String>{
             String line = "";
             while((line = reader.readLine()) != null){
                 buffer.append(line);
-                Log.d("URLPaser",line);
+//                Log.d("URLPaser",line);
             }
 
 
