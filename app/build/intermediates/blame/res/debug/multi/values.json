@@ -38,7 +38,15 @@
                     "endOffset": 801
                 },
                 "from": {
-                    "file": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/values/array.xml"
+                    "file": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/values/array.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 449,
+                        "endLine": 28,
+                        "endColumn": 19,
+                        "endOffset": 758
+                    }
                 }
             },
             {
@@ -968,14 +976,7 @@
                     "endOffset": 7174
                 },
                 "from": {
-                    "file": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 102,
-                        "endColumn": 50,
-                        "endOffset": 148
-                    }
+                    "file": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/values/colors.xml"
                 }
             },
             {

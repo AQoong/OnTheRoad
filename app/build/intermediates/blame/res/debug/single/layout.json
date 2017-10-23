@@ -1,19 +1,19 @@
 [
     {
-        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/intro.xml",
-        "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/layout/intro.xml"
-    },
-    {
         "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
         "source": "/Users/aqoong/.android/build-cache/6e4b40846d98983a02a4dbf51098c65bc1401010/output/res/layout/design_navigation_item.xml"
     },
     {
-        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "/Users/aqoong/.android/build-cache/8636589ddf608efeff06d382c079d019ed168159/output/res/layout/abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/intro.xml",
+        "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/layout/intro.xml"
     },
     {
         "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
         "source": "/Users/aqoong/.android/build-cache/8636589ddf608efeff06d382c079d019ed168159/output/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/aqoong/.android/build-cache/8636589ddf608efeff06d382c079d019ed168159/output/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
@@ -24,12 +24,12 @@
         "source": "/Users/aqoong/.android/build-cache/6e4b40846d98983a02a4dbf51098c65bc1401010/output/res/layout/design_text_input_password_icon.xml"
     },
     {
-        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
-        "source": "/Users/aqoong/.android/build-cache/6e4b40846d98983a02a4dbf51098c65bc1401010/output/res/layout/design_navigation_item_subheader.xml"
-    },
-    {
         "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
         "source": "/Users/aqoong/.android/build-cache/6e4b40846d98983a02a4dbf51098c65bc1401010/output/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/Users/aqoong/.android/build-cache/6e4b40846d98983a02a4dbf51098c65bc1401010/output/res/layout/design_navigation_item_subheader.xml"
     },
     {
         "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",

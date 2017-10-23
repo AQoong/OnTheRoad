@@ -156,17 +156,22 @@
         </TableRow>
         <TableRow
             android:layout_margin="3dp"
-            android:paddingTop="5dp">
+            android:padding="5dp">
 
-            <TextView
+            <ScrollView
                 android:scrollbars="vertical|horizontal"
-                android:textColor="@android:color/black"
-                android:lines="20"
-                android:id="@+id/find_detail_thing"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:text="notic"/>
+                >
+                <TextView
+                    android:paddingRight="10dp"
+                    android:maxLines="20"
+                    android:lines="20"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/find_detail_thing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="notic"/>
+            </ScrollView>
         </TableRow>
 
     </TableLayout>

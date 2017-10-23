@@ -4,7 +4,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
+import android.view.DragEvent;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
 
 import com.app.aqoong.smsreport.R;
@@ -15,7 +19,7 @@ import com.app.aqoong.smsreport.data.ProductData;
  * Created by aqoong on 2017. 10. 11..
  */
 
-public class FindDetailActivity extends AppCompatActivity {
+public class FindDetailActivity extends AppCompatActivity{
     private ProductData data = null;
 
     private boolean isSub = false;                               //지하철 체크
@@ -53,6 +57,7 @@ public class FindDetailActivity extends AppCompatActivity {
         vNotic = (TextView)findViewById(R.id.find_detail_thing);
         vStatus = (TextView)findViewById(R.id.find_detail_status);
 
+
         initViewData();
     }
 
@@ -71,6 +76,7 @@ public class FindDetailActivity extends AppCompatActivity {
         vTel.setText(data.takeTel);
         vStatus.setText(data.status);
         vNotic.setText(data.notic);
+
         vGetPlace.setText(data.position);
         if(isSub)
             vGetPlace.setText(data.place);
@@ -97,4 +103,16 @@ public class FindDetailActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+//
+//    @Override
+//    public boolean dispatchTouchEvent(MotionEvent ev) {
+//
+//        try{
+//            return super.dispatchTouchEvent(ev);
+//        }catch (NullPointerException e){
+//            e.printStackTrace();
+//        }
+//        return false;
+//    }
 }

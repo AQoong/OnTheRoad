@@ -225,22 +225,22 @@ public class ReportInsertActivity extends AppCompatActivity {
                 carInfoPanel.setVisibility(View.VISIBLE);
                 lineNumber.setVisibility(View.GONE);
 //                comName.setVisibility(View.VISIBLE);
-                titleCompany.setText("운수회사");
+                titleCompany.setText("운수회사(선택)");
                 break;
             case Globar.TYPE_BUS:
 //            case Globar.TYPE_VILBUS:
                 lineNumber.setVisibility(View.VISIBLE);
                 carInfoPanel.setVisibility(View.VISIBLE);
 //                comName.setVisibility(View.VISIBLE);
-                titleCompany.setText("운수회사/버스노선");
+                titleCompany.setText("운수회사/버스노선(선택)");
                 break;
             case Globar.TYPE_SUB:
                 carInfoPanel.setVisibility(View.GONE);
                 lineNumber.setVisibility(View.VISIBLE);
-//                comName.setVisibility(View.GONE);
-                comName.setHint("노선번호");
+                comName.setVisibility(View.GONE);
+//                comName.setHint("노선번호");
                 titleCompany.setText("지하철노선");
-                lineNumber.setHint("열차번호");
+                lineNumber.setHint("열차번호(4자리)");
                 break;
         }
     }
@@ -305,7 +305,7 @@ public class ReportInsertActivity extends AppCompatActivity {
                 break;
             case Globar.TYPE_SUB:
                 Log.d(TAG, ""+lineNumber.getText());
-                if(lineNumber.getText().length() <= 0 || comName.getText().length() <= 0) {
+                if(lineNumber.getText().length() <= 0) {
                     result = true;
                 }
                 break;

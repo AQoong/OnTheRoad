@@ -167,7 +167,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:maxLines="20"
-        android:textCursorDrawable="@color/colorAccent"
         android:textColor="@android:color/black"
         android:textColorHint="#A5A2A2"
         android:hint="무정차통과/신호위반/과속/난폭운전 또는 기타 불편사항을 상세하게 적어주세요"
