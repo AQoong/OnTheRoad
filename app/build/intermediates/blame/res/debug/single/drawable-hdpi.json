@@ -16,6 +16,10 @@
         "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/drawable-hdpi/bus.png"
     },
     {
+        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/drawable-hdpi/light.png",
+        "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/drawable-hdpi/light.png"
+    },
+    {
         "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/drawable-hdpi/subway.png",
         "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/drawable-hdpi/subway.png"
     },

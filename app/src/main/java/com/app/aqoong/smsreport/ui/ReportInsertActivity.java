@@ -1,6 +1,7 @@
 package com.app.aqoong.smsreport.ui;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -19,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -48,6 +50,7 @@ public class ReportInsertActivity extends AppCompatActivity {
 
     //차량정보
     private LinearLayout carInfoPanel = null;
+    private ImageButton btnHelp = null;         //차량번호 안내 버튼
     private EditText carInfoNumber1 = null;     //차량번호 앞2자리
     private Spinner carInfo        = null;     //아바사자
     private EditText carInfoNumber2 = null;     //차량번호 뒷4자리
@@ -119,6 +122,7 @@ public class ReportInsertActivity extends AppCompatActivity {
 
         //carinfo
         carInfoPanel   = (LinearLayout) findViewById(R.id.carinfo_panel);
+        btnHelp        = (ImageButton)findViewById(R.id.btn_help);
         carInfoNumber1 = (EditText) findViewById(R.id.carinfo_1);
         carInfo        = (Spinner)findViewById(R.id.spin_carinfo);
         carInfoNumber2 = (EditText) findViewById(R.id.carinfo_2);
@@ -127,6 +131,7 @@ public class ReportInsertActivity extends AppCompatActivity {
         comName = (EditText)findViewById(R.id.company);
         lineNumber = (EditText)findViewById(R.id.bus_linenumber);
 
+        btnHelp.setOnClickListener(btnListener);
         // get current time
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
@@ -160,7 +165,7 @@ public class ReportInsertActivity extends AppCompatActivity {
                 case R.id.btn_nextstep:
                     // next step change activity
                     if(checkEmptyView(transType))
-                        Snackbar.make(carInfoPanel, "필수 기입정보가 잘 못되었습니다", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(carInfoPanel, "필수 입력정보가 비어있습니다", Snackbar.LENGTH_LONG).show();
                     else
                     {
                         HashMap<String, Object> datas = new HashMap<>();
@@ -209,6 +214,11 @@ public class ReportInsertActivity extends AppCompatActivity {
                     }, Calendar.HOUR_OF_DAY, Calendar.MINUTE, false);
                     timePickerDialog.show();
                     break;
+                case R.id.btn_help:
+                    Dialog dialog = new Dialog(mContext);
+                    dialog.setContentView(R.layout.dialog_help);
+                    dialog.show();
+                    break;
             }
         }
     };
@@ -223,23 +233,22 @@ public class ReportInsertActivity extends AppCompatActivity {
             case Globar.TYPE_TAXI:
                 carInfoPanel.setVisibility(View.VISIBLE);
                 lineNumber.setVisibility(View.GONE);
-//                comName.setVisibility(View.VISIBLE);
                 titleCompany.setText("운수회사(선택)");
+                btnHelp.setVisibility(View.GONE);
                 break;
             case Globar.TYPE_BUS:
-//            case Globar.TYPE_VILBUS:
                 lineNumber.setVisibility(View.VISIBLE);
                 carInfoPanel.setVisibility(View.VISIBLE);
-//                comName.setVisibility(View.VISIBLE);
                 titleCompany.setText("운수회사/버스노선(선택)");
+                btnHelp.setVisibility(View.GONE);
                 break;
             case Globar.TYPE_SUB:
                 carInfoPanel.setVisibility(View.GONE);
                 lineNumber.setVisibility(View.VISIBLE);
                 comName.setVisibility(View.GONE);
-//                comName.setHint("노선번호");
                 titleCompany.setText("지하철노선");
-                lineNumber.setHint("열차번호(4자리)");
+                lineNumber.setHint("차량번호");
+                btnHelp.setVisibility(View.VISIBLE);
                 break;
         }
     }

@@ -205,28 +205,28 @@ public class FindThingsFragment extends Fragment {
                 result = Globar.FIND_CODE_SUB14;
                 break;
             case 2:
-                //5~8호선
-                result = Globar.FIND_CODE_SUB58;
-                break;
-            case 3:
-                //9호선
-                result = Globar.FIND_CODE_SUB9;
-                break;
-            case 4:
                 //법인택시
                 result = Globar.FIND_CODE_COMPANYTAXI;
                 break;
-            case 5:
+            case 3:
                 //개인택시
                 result = Globar.FIND_CODE_TAXI;
                 break;
-            case 6:
+            case 4:
                 //코레일
                 result = Globar.FIND_CODE_KORAIL;
                 break;
-            case 7:
+            case 5:
                 //마을버스
                 result = Globar.FIND_CODE_VILBUS;
+                break;
+            case 6:
+                //5~8호선
+                result = Globar.FIND_CODE_SUB58;
+                break;
+            case 7:
+                //9호선
+                result = Globar.FIND_CODE_SUB9;
                 break;
             case 8:
                 //경찰청 사이트

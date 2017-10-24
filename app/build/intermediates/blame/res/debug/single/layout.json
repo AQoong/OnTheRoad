@@ -40,6 +40,10 @@
         "source": "/Users/aqoong/.android/build-cache/6e4b40846d98983a02a4dbf51098c65bc1401010/output/res/layout/design_navigation_menu.xml"
     },
     {
+        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/dialog_help.xml",
+        "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/layout/dialog_help.xml"
+    },
+    {
         "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/layout/insert_userdata_layout.xml",
         "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/layout/insert_userdata_layout.xml"
     },

@@ -1,4 +1,4 @@
-#Mon Oct 23 10:59:40 KST 2017
+#Tue Oct 24 14:42:47 KST 2017
 base.0=/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_971b8639cbff763b3b801d8bb810ca270c2c72ac
 renamed.1=classes2.dex
 renamed.0=classes.dex

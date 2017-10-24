@@ -28,6 +28,10 @@
         "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/drawable-xxxhdpi/subway_push.png"
     },
     {
+        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/light.png",
+        "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/drawable-xxxhdpi/light.png"
+    },
+    {
         "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/taxi.png",
         "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/drawable-xxxhdpi/taxi.png"
     }

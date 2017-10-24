@@ -120,6 +120,10 @@
         "source": "/Users/aqoong/.android/build-cache/6e4b40846d98983a02a4dbf51098c65bc1401010/output/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
+        "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/drawable/metro_number.png",
+        "source": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/res/drawable/metro_number.png"
+    },
+    {
         "merged": "/Users/aqoong/Documents/Dev/impotant/SMSReport/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
         "source": "/Users/aqoong/.android/build-cache/6e4b40846d98983a02a4dbf51098c65bc1401010/output/res/drawable/design_fab_background.xml"
     },
