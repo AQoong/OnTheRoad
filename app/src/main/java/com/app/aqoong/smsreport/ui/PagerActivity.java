@@ -70,8 +70,6 @@ public class PagerActivity extends AppCompatActivity {
 
             switch(position){
                 case 0:
-
-
                     return reportMainFragment;
                 case 1:
                     return findThingsFragment;

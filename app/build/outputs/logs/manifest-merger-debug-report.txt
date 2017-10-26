@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml:2:1-45:12
+ADDED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml:2:1-47:12
 	package
 		ADDED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml
@@ -126,6 +126,14 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml:43:5-78
 	android:name
 		ADDED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml:43:22-76
+uses-permission#android.permission.READ_SMS
+ADDED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml:44:5-66
+	android:name
+		ADDED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml:44:22-64
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml:45:5-74
+	android:name
+		ADDED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml:45:22-72
 uses-sdk
 INJECTED from /Users/aqoong/Documents/Dev/impotant/SMSReport/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [gun0912.ted:tedpermission:2.0.0] /Users/aqoong/.android/build-cache/c06adc9863d400cdac83c2e8c596366550f81c76/output/AndroidManifest.xml:5:5-7:41

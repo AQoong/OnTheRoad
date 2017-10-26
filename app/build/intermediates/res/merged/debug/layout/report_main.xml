@@ -30,6 +30,8 @@
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/company"
+                style="@style/EditTextStyle"
+                android:theme="@style/EditTextStyle"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -43,7 +45,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:maxLength="5"
+                style="@style/EditTextStyle"
+                android:theme="@style/EditTextStyle"
                 android:textCursorDrawable="@color/colorAccent"
                 android:visibility="invisible"
                 android:hint="노선번호"
@@ -77,6 +80,8 @@
 
                 <!--차량번호1-->
                 <EditText
+                    style="@style/EditTextStyle"
+                    android:theme="@style/EditTextStyle"
                     android:id="@+id/carinfo_1"
                     android:inputType="number"
                     android:layout_width="wrap_content"
@@ -96,6 +101,7 @@
                 </Spinner>
                 <!--4자리번호-->
                 <EditText
+                    style="@style/EditTextStyle"
                     android:id="@+id/carinfo_2"
                     android:inputType="number"
                     android:layout_width="wrap_content"
@@ -135,6 +141,8 @@
                 android:text="GPS"/>
         </LinearLayout>
         <EditText
+            style="@style/EditTextStyle"
+            android:theme="@style/EditTextStyle"
             android:id="@+id/location_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -170,6 +178,8 @@
         android:textSize="15sp"
         android:textStyle="bold"/>
     <EditText
+        style="@style/EditTextStyle"
+        android:theme="@style/EditTextStyle"
         android:layout_weight="1.1"
         android:id="@+id/content_text"
         android:layout_width="match_parent"

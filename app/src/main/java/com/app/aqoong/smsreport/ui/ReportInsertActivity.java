@@ -82,6 +82,7 @@ public class ReportInsertActivity extends AppCompatActivity {
 
         transType = getIntent().getIntExtra("TYPE", 0);
         String subTitle = null;
+
         switch(transType){
             case Globar.TYPE_TAXI:
                 subTitle = "택시";
@@ -95,6 +96,8 @@ public class ReportInsertActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.report_main);
+
+        //keyboard hide
         View vParent = findViewById(R.id.report_main);
         vParent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,12 +112,11 @@ public class ReportInsertActivity extends AppCompatActivity {
             }
         });
 
+        //actionbar setting
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name);
         getSupportActionBar().setSubtitle(subTitle);
-
-
 
         //buttons
         findViewById(R.id.btn_nextstep).setOnClickListener(btnListener);
@@ -131,7 +133,7 @@ public class ReportInsertActivity extends AppCompatActivity {
         comName = (EditText)findViewById(R.id.company);
         lineNumber = (EditText)findViewById(R.id.bus_linenumber);
 
-        btnHelp.setOnClickListener(btnListener);
+
         // get current time
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
@@ -228,6 +230,8 @@ public class ReportInsertActivity extends AppCompatActivity {
      * @param type
      */
     private void setView(int type){
+
+        btnHelp.setOnClickListener(btnListener);
 
         switch(type){
             case Globar.TYPE_TAXI:

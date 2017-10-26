@@ -2,20 +2,17 @@ package com.app.aqoong.smsreport.ui;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.telephony.TelephonyManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -64,19 +61,15 @@ public class UserDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         context = this;
-
         tempDialog = new Dialog(this);
 
         mGetDatas = (HashMap<String, Object>) getIntent().getSerializableExtra("DATA");
-
-        if(mGetDatas.equals(null)){
-            Log.e(TAG, "data is null");
-        }
+//        if(mGetDatas.equals(null)){Log.e(TAG, "data is null");}
         String[] d = getResources().getStringArray(R.array.spin_email);
 
-
         String subTitle = null;
-        switch((int)mGetDatas.get(Globar.KEY_TYPE)){
+        switch((int)mGetDatas.get(Globar.KEY_TYPE))
+        {
             case Globar.TYPE_TAXI:
                 subTitle = "택시";
                 break;
@@ -103,7 +96,6 @@ public class UserDataActivity extends AppCompatActivity {
                 });
             }
         });
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name);
@@ -112,6 +104,7 @@ public class UserDataActivity extends AppCompatActivity {
 
         reporterName = (EditText)findViewById(R.id.report_name);
         reporterPhone = (EditText)findViewById(R.id.report_phone);
+        findViewById(R.id.report_btn_bringnum).setOnClickListener(reportButtonEvent);
 
         receivePanel = (LinearLayout)findViewById(R.id.report_email_panel);
         radioSMS = (RadioButton)findViewById(R.id.checkbox_sms);
@@ -168,27 +161,41 @@ public class UserDataActivity extends AppCompatActivity {
     private View.OnClickListener reportButtonEvent = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            mGetDatas.put(Globar.KEY_REPORTER_NAME, reporterName.getText());
 
-            mGetDatas.put(Globar.KEY_REPORTER_PHONE, reporterPhone.getText());
-
-            String email = null;
-
-            if(radioEmail.isChecked()) {
-                if (isCustom)
-                    email = emailID.getText() + "@" + emailAdd_users.getText();
-                else
-                    email = emailID.getText() + "@" + spinEmailAdd.getSelectedItem().toString();
-
-                mGetDatas.put(Globar.KEY_REPORTER_EMAIL, email);
-            }
-
-            TedPermission.with(context)
-                    .setPermissionListener(serviceListener)
-                    .setRationaleMessage("신고 서비스는 문자 권한이 필요합니다\n권한 허용 뒤 이용해 주시기 바랍니다")
+            //내 전화번호 가져오기
+            if(v.getId() == R.id.report_btn_bringnum){
+                TedPermission.with(context)
+                        .setPermissionListener(bringNumberListener)
+                        .setRationaleMessage("전화번호를 가져오기위해 휴대전화 내용을 읽는 권한이 필요합니다")
 //                                .setGotoSettingButton(true)
-                    .setPermissions(Globar.permissions[0])
-                    .check();
+                        .setPermissions(Globar.permissions[2])
+                        .check();
+            }
+            //신고하기
+            else if(v.getId() == R.id.btn_report) {
+
+                mGetDatas.put(Globar.KEY_REPORTER_NAME, reporterName.getText());
+
+                mGetDatas.put(Globar.KEY_REPORTER_PHONE, reporterPhone.getText());
+
+                String email = null;
+
+                if (radioEmail.isChecked()) {
+                    if (isCustom)
+                        email = emailID.getText() + "@" + emailAdd_users.getText();
+                    else
+                        email = emailID.getText() + "@" + spinEmailAdd.getSelectedItem().toString();
+
+                    mGetDatas.put(Globar.KEY_REPORTER_EMAIL, email);
+                }
+
+                TedPermission.with(context)
+                        .setPermissionListener(serviceListener)
+                        .setRationaleMessage("신고 서비스는 문자 권한이 필요합니다\n권한 허용 뒤 이용해 주시기 바랍니다")
+//                                .setGotoSettingButton(true)
+                        .setPermissions(Globar.permissions[0])
+                        .check();
+            }
         }
     };
 
@@ -234,5 +241,19 @@ public class UserDataActivity extends AppCompatActivity {
         }
     };
 
+    private PermissionListener bringNumberListener = new PermissionListener() {
+
+        @Override
+        public void onPermissionGranted() {
+            TelephonyManager tMgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+            String mPhoneNumber = tMgr.getLine1Number();
+            reporterPhone.setText(mPhoneNumber);
+        }
+
+        @Override
+        public void onPermissionDenied(ArrayList<String> deniedPermissions) {
+
+        }
+    };
 
 }

@@ -723,7 +723,7 @@
     <string name="tedpermission_close">Close</string>
     <string name="tedpermission_confirm">Confirm</string>
     <string name="tedpermission_setting">Setting</string>
-    <string name="terms_notic">다산콜센터에 문자로 전송되며 요금제에 따라 전송요금이 발생 될 수 있으며\n허위 신고일 경우 불이익이 발생할 수 있습니다.</string>
+    <string name="terms_notic">서울 다산콜센터에 문자로 전송되며 요금제에 따라 전송요금이 발생 될 수 있으며\n허위 신고일 경우 불이익이 발생할 수 있습니다.</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -733,7 +733,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -1758,6 +1758,9 @@
         <item name="tabBackground">?attr/selectableItemBackground</item>
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="colorControlActivated">@color/colorYellowOnLoad</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
