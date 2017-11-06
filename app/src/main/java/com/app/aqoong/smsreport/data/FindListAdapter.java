@@ -16,6 +16,7 @@ import java.util.Locale;
 
 /**
  * Created by aqoong on 2017. 10. 11..
+ * 분실물 조회 리스트 어댑터
  */
 
 public class FindListAdapter extends RecyclerView.Adapter<FindListAdapter.ViewHolder> {
