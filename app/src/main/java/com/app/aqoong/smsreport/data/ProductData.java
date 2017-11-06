@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 /**
  * Created by aqoong on 2017. 10. 11..
+ * Product VO
  */
 
 public class ProductData implements Serializable {
