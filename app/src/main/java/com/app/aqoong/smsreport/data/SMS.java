@@ -8,6 +8,8 @@ import java.util.HashMap;
 
 /**
  * Created by aqoong on 2017. 9. 21..
+ * 
+ * create sms text...
  */
 
 public class SMS{
