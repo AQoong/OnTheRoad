@@ -20,6 +20,7 @@ import com.app.aqoong.smsreport.ui.fragment.ReportMainFragment;
 
 /**
  * Created by aqoong on 2017. 9. 22..
+ * First class
  */
 
 public class PagerActivity extends AppCompatActivity {
